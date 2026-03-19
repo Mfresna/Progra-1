@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1773933436 source:c:\users\usuario\desktop\personal\programacion\tp1-punteros-extra\punteroextra\main.c
+	<stdio.h>
+	<stdlib.h>
+

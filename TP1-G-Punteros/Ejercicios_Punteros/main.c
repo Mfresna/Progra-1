@@ -28,6 +28,7 @@ int main()
                 printf("Ahora el numero es: %d", numero);
 
                 printf("\n\n");
+                system("pause");
                 break;
             case 2:
                 int a;
@@ -40,6 +41,7 @@ int main()
                 printf("\n\t valor B: %d", b);
 
                 printf("\n\n");
+                system("pause");
                 break;
             case 3:
                 int edad;
@@ -49,6 +51,7 @@ int main()
                 printf("\nLa edad final del usuario es: %d", edad);
 
                 printf("\n\n");
+                system("pause");
                 break;
 
             case 4:
@@ -68,6 +71,7 @@ int main()
                 printf("\nEl resultado es: %d y su resto es: %d",cociente, resto);
 
                 printf("\n\n");
+                system("pause");
                 break;
             case 5:
                 int segundos = 0;
@@ -82,12 +86,16 @@ int main()
                 printf("\nSon %d horas o %d minutos",horas, minutos);
 
                 printf("\n\n");
+                system("pause");
                 break;
             case 0:
                 printf("Usted ha salido del programa...\n");
                 break;
             default:
                 printf("Opcion invalida\n");
+
+                printf("\n\n");
+                system("pause");
         }
     }while(opcion != 0);
 
@@ -96,6 +104,8 @@ int main()
 
 //FUNCIONES
 void menuOpciones(int *opcion){
+
+    system("cls");
 
     printf("========== MENU ==========\n");
     printf("1 - Cambiar signo usando referencia\n");
@@ -108,6 +118,9 @@ void menuOpciones(int *opcion){
 
     printf("\nIngrese un numero: ");
     scanf("%d", opcion);
+
+    system("cls");
+
 }
 
     //Ejercicio 1
