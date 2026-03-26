@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1773966011 source:c:\users\matia\onedrive\tecnicatura en programacion\ayudantia\progra-1\tp2-g-pilas\pilas\main.c
+	<stdio.h>
+	<stdlib.h>
+	"pila.h"
+
+1238076008 c:\users\matia\onedrive\tecnicatura en programacion\ayudantia\progra-1\tp2-g-pilas\pilas\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1238076000 source:c:\users\matia\onedrive\tecnicatura en programacion\ayudantia\progra-1\tp2-g-pilas\pilas\pila.c
+	"pila.h"
+

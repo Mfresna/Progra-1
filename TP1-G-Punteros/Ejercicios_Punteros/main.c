@@ -8,6 +8,7 @@ void cargar(int *a, int *b);
 void validarEdad(int *edad);
 void dividir(int dividendo, int divisor, int *cociente, int *resto);
 void convertirTiempo(int segundos, int *minutos, int *horas);
+void datos16 (int *x, float *y, char *c);
 
 //MAIN
 int main()
@@ -17,9 +18,29 @@ int main()
     do {
         menuOpciones(&opcion);
 
+        //Variables
+        int numero = 0;
+
+        int a;
+        int b;
+
+        int edad;
+
+        int dividendo;
+        int divisor;
+        int cociente;
+        int resto;
+
+        int segundos = 0;
+        int minutos;
+        int horas;
+
+        int x=9;
+float y=44.6;
+char c='a';
+
         switch(opcion) {
             case 1:
-                int numero;
                 printf("Ingrese un valor numerico:");
                 scanf("%d",&numero);
 
@@ -31,8 +52,6 @@ int main()
                 system("pause");
                 break;
             case 2:
-                int a;
-                int b;
 
                 cargar(&a,&b);
 
@@ -44,7 +63,6 @@ int main()
                 system("pause");
                 break;
             case 3:
-                int edad;
 
                 validarEdad(&edad);
 
@@ -55,16 +73,20 @@ int main()
                 break;
 
             case 4:
-                int dividendo;
-                int divisor;
-                int cociente;
-                int resto;
 
                 printf("\nDividir:");
                 scanf("%d",&dividendo);
 
-                printf("Entre:");
-                scanf("%d",&divisor);
+                do{
+                    printf("Entre:");
+                    scanf("%d",&divisor);
+
+                    if(divisor == 0){
+                        printf("No se puede dividir por cero!");
+                    }
+
+                }while(divisor == 0);
+
 
                 dividir(dividendo, divisor, &cociente, &resto);
 
@@ -74,9 +96,6 @@ int main()
                 system("pause");
                 break;
             case 5:
-                int segundos = 0;
-                int minutos;
-                int horas;
 
                 printf("\nSegundos a convertir:");
                 scanf("%d",&segundos);
@@ -84,6 +103,12 @@ int main()
                 convertirTiempo(segundos, &minutos ,&horas);
 
                 printf("\nSon %d horas o %d minutos",horas, minutos);
+
+                printf("\n\n");
+                system("pause");
+                break;
+            case 6:
+                datos16(&x,&y,&c);
 
                 printf("\n\n");
                 system("pause");
@@ -131,7 +156,7 @@ void cambiarSigno(int *num) {
     //Ejercicio 2
 void cargar(int *a, int *b) {
     printf("Ingrese el primer numero: ");
-    scanf("%d", a);
+    scanf("%d",     a);
 
     printf("Ingrese el segundo numero: ");
     scanf("%d", b);
@@ -152,8 +177,14 @@ void validarEdad(int *edad) {
 
     //Ejercicio 4
 void dividir(int dividendo, int divisor, int *cociente, int *resto) {
-    *cociente = dividendo / divisor;
-    *resto = dividendo % divisor;
+    if(divisor != 0){
+        *cociente = dividendo / divisor;
+        *resto = dividendo % divisor;
+    }else{
+        *cociente = 0;
+        *resto = 0;
+    }
+
 }
 
     //Ejercicio 5
@@ -161,4 +192,16 @@ void convertirTiempo(int segundos, int *minutos, int *horas) {
     *minutos = segundos / 60;
     *horas = segundos / 3600;
 }
+
+
+
+void datos16 (int *x, float *y, char *c)
+{
+printf("%p - %p - %p \n", x, y, c);
+printf("%d - %f - %c", x, y, c);
+*x=8;
+*y=4.2;
+*c='g';
+}
+
 
