@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1712622552 source:c:\users\matia\onedrive\tecnicatura en programacion\1 - cuatrimestre\programacion 1\trabajos practicos\tps resueltos - codigo\tp3 - arreglos\main.c
+	<stdio.h>
+	<stdlib.h>
+	"pila.h"
+
+1490112217 source:c:\users\matia\onedrive\tecnicatura en programacion\1 - cuatrimestre\programacion 1\trabajos practicos\tps resueltos - codigo\tp3 - arreglos\pila.c
+	"pila.h"
+
+1490112217 c:\users\matia\onedrive\tecnicatura en programacion\1 - cuatrimestre\programacion 1\trabajos practicos\tps resueltos - codigo\tp3 - arreglos\pila.h
+	<stdio.h>
+	<malloc.h>
+
