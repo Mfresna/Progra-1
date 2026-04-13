@@ -255,7 +255,7 @@ int main(){
             do{
                 printf("\n\nDesea ordenarlo por Seleccion o Insercion? (s/i): ");
                 fflush(stdin);
-                scanf("%c",&opcionEj11);
+                scanf(" %c",&opcionEj11);
                 printf("\n\n");
 
                 errorEj11 = 0; //Si pone mal la opcion cambia a 1
