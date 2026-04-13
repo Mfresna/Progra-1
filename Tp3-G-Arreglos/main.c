@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "pila.h"
 
 #define DIM 5
@@ -7,6 +8,8 @@
 
 
 ///Prototipado
+int listadoEjercicios();
+
     //ejercico1
 void cargarArreglo(int arreglo[], int *validos);
     //ejercicio2
@@ -281,9 +284,6 @@ int main(){
             cargarArregloCharRandomUpper(miArregloEj12A,&validosEj12A,DIM);
             ordenamientoPorInsercionChar(miArregloEj12A,validosEj12A);
             mostrarArregloChar(miArregloEj12A,&validosEj12A);
-
-            //system("pause");
-            sleep(1);
 
             cargarArregloCharRandomUpper(miArregloEj12B,&validosEj12B,DIM);
             ordenamientoPorInsercionChar(miArregloEj12B,validosEj12B);
@@ -641,35 +641,31 @@ void ordenamientoPorInsercion(int arreglo[], int *validos){
 }
 
 //FUNCIONES EJERCICIO 12
-void intercalarArrays(char arregloA[], char arregloB[], char arregloC[], int validosA, int validosB,int *validosC){
-    int j=0 , i=0, k=0;
+void intercalarArrays(char arregloA[], char arregloB[], char arregloC[], int validosA, int validosB, int *validosC){
+    int i = 0, j = 0, k = 0;
 
-    //NO ANDA BIEN, NO SE PQ...
+    *validosC = 0; //Inicializo C en 0 por si los arreglos estan vacios
 
-    while(i<=validosA && j<=validosB){
-
-        if(arregloA[i] < arregloB[j]){
-            arregloC[k] = arregloA[i];
-            k++;
-            i++;
-            (*validosC)++;
-
-        }else if (arregloA[i] > arregloB[j]){
-            arregloC[k] = arregloB[j];
-            k++;
-            j++;
-            (*validosC)++;
-
-        }else{  //iguales
-            arregloC[k] = arregloA[i];
-                k++;
-                i++;
-            arregloC[k] = arregloB[j];
-                k++;
-                j++;
-
-            (*validosC)+=2;
+    // Mientras ambos tengan elementos
+    while(i < validosA && j < validosB){
+        if(arregloA[i] <= arregloB[j]){
+            arregloC[k++] = arregloA[i++];
+        } else {
+            arregloC[k++] = arregloB[j++];
         }
+        (*validosC)++;
+    }
+
+    // Copiar lo que queda de A
+    while(i < validosA){
+        arregloC[k++] = arregloA[i++];
+        (*validosC)++;
+    }
+
+    // Copiar lo que queda de B
+    while(j < validosB){
+        arregloC[k++] = arregloB[j++];
+        (*validosC)++;
     }
 }
 

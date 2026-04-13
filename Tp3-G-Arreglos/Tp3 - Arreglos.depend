@@ -11,3 +11,16 @@
 	<stdio.h>
 	<malloc.h>
 
+1776080921 source:c:\users\usuario\desktop\personal\programacion\tp3-g-arreglos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"pila.h"
+
+1776078054 c:\users\usuario\desktop\personal\programacion\tp3-g-arreglos\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1776078054 source:c:\users\usuario\desktop\personal\programacion\tp3-g-arreglos\pila.c
+	"pila.h"
+
